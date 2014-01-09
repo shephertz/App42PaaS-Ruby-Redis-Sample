@@ -21,6 +21,10 @@ DB Configure for Production environment (application_root_dir/config/redis.rb)
 
     Redis.current = Redis.new(:host => '<VM IP>', :port => <VM PORT>, :password => '<PASSWORD>')
     
+application_root_dir/app.rb
+
+    DataMapper.setup(:default, {:adapter  => "redis", :host => '<VM IP>', :port => <VM PORT>, :password => '<PASSWORD>'})
+    
 ### Deploy a Ruby application
 
     $ app42 deploy
